@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 def riot():
     headers = {'User-Agent': "Mozilla/5.0"}
     domain = 'https://fow.kr/find/'
-    query_string = 'hideonbush'
+    query_string = '마틴마틴마틴마틴'
     parser = "lxml"
     class_names = "recent_td"
     tag_name = "td"
@@ -21,6 +21,9 @@ def riot():
     titles = [i.find('a')['href'] for i in titles if i.find('a') is not None ]
     for i in titles:
         print(f"https://fow.kr/{i}")
+
+    import subprocess
+    subprocess.call(r'C:\Users\min\Code\riot-project\static\data\test.bat')
 riot()
 
 """
@@ -112,3 +115,4 @@ main()
 
 
 """
+
